@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+.rescue {
+  min-height: 100vh;
+  background: linear-gradient(0deg, #fff, #03a9f4);
+}
+
+.sky {
+  position: relative;
+  widows: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sky h2 {
+  font-size: 20em;
+  text-shadow: 15px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sky h2 .red {
+  color: red;
+}
+.sky h2 .white {
+  color: #fff;
+}
+.sky h2 .blue {
+  color: blue;
+}
+
+.sky h2 span {
+  display: inline-block;
+  animation: animate 2s ease-in-out infinite;
+}
+
+.sky h2 span:nth-child(even) {
+  animation-delay: -1s;
+}
+
+@keyframes animate {
+  /* move 50% up for first and last numbers */
+  0%,
+  100% {
+    transform: translateY(-50px);
+  }
+  /* move 50% down the second number */
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+.field {
+  padding: 150px;
+  height: 100vh;
+  background: #060808;
+  box-shadow: inset 0 20px 10px #393a36;
+  text-align: center;
+}
+
+.field h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.field a {
+  background: #fff;
+  color: #000;
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 1s ease-in-out;
+}
+a:hover {
+  opacity: 0.5;
+}
+.superman {
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+  max-width: 300px;
+}
+
+.grass {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: url(grass.png);
+  background-position: bottom;
+  animation: animateGrass 0.2s linear infinite;
+}
+
+@keyframes animateGrass {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -94px 0;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .sky h2 {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sky h2 {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .sky h2 {
+    font-size: 17em;
+  }
+}
